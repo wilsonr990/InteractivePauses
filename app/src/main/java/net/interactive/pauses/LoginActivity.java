@@ -1,6 +1,5 @@
 package net.interactive.pauses;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +10,7 @@ import net.interactive.pauses.R.id;
 import net.interactive.pauses.R.layout;
 
 public class LoginActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+    public static final String LOGIN_NAME = "com.example.myfirstapp.MESSAGE";
     private int selectedAvatar;
 
     @Override
@@ -39,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
     void doLogin(String name, int avatar) {
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, name);
+        intent.putExtra(LOGIN_NAME, name);
         startActivity(intent);
     }
 
