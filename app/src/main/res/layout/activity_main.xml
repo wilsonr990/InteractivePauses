@@ -5,18 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightBlue"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="@dimen/default_margin"
     tools:context="net.interactive.pauses.LoginActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/welcome" />
+        android:layout_marginBottom="@dimen/default_margin"
+        android:gravity="center">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/secondary_margin"
+            android:background="@color/red"
+            android:contentDescription="@string/avatar" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="InterActive Pauses"
+            android:textStyle="italic|bold"
+            android:textSize="30sp"
+            android:gravity="center"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:gravity="center"
+        android:onClick="goToProfile">
 
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/avatar" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:background="@color/blue"
+        android:onClick="goToActivities"
+        android:text="@string/activities" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:background="@color/blue"
+        android:onClick="goToSchedule"
+        android:text="@string/schedule" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:background="@color/blue"
+        android:onClick="goToConfiguration"
+        android:text="@string/configuration" />
 </LinearLayout>

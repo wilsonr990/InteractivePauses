@@ -7,4 +7,7 @@
     <string name="google_login">INICIAR SESIÓN CON GOOGLE</string>
     <string name="avatar">av1</string>
     <string name="welcome">Welcome mr</string>
+    <string name="configuration">CONFIGURACIÓN</string>
+    <string name="schedule">MIS HORARIOS</string>
+    <string name="activities">ACTIVIDADES</string>
 </resources>

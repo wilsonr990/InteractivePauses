@@ -1,15 +1,15 @@
 package net.interactive.pauses;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
 import net.interactive.pauses.R.id;
 import net.interactive.pauses.R.layout;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
     public static final String LOGIN_NAME = "com.example.myfirstapp.MESSAGE";
     private int selectedAvatar;
 
