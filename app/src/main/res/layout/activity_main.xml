@@ -65,7 +65,7 @@
         android:layout_marginBottom="@dimen/default_margin"
         android:background="@color/blue"
         android:onClick="goToSchedule"
-        android:text="@string/schedule" />
+        android:text="@string/mySchedule" />
 
     <Button
         android:layout_width="match_parent"

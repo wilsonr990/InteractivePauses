@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    android:padding="@dimen/secondary_margin">
 
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/blue"
+        android:columnCount="3"
+        android:padding="@dimen/secondary_margin"
+        android:rowCount="4">
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/secondary_margin"
+            android:layout_marginEnd="@dimen/secondary_margin"
+            android:layout_marginRight="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/activity"
+            android:onClick="openActivity"/>
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/secondary_margin"
+            android:layout_marginEnd="@dimen/secondary_margin"
+            android:layout_marginRight="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/activity" />
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/activity" />
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/secondary_margin"
+            android:layout_marginEnd="@dimen/secondary_margin"
+            android:layout_marginRight="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/activity" />
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/secondary_margin"
+            android:layout_marginEnd="@dimen/secondary_margin"
+            android:layout_marginRight="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/activity" />
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/activity" />
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/secondary_margin"
+            android:layout_marginEnd="@dimen/secondary_margin"
+            android:layout_marginRight="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/activity" />
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/secondary_margin"
+            android:layout_marginEnd="@dimen/secondary_margin"
+            android:layout_marginRight="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/activity" />
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/secondary_margin"
+            android:background="@color/white"
+            android:contentDescription="@string/activity" />
+    </GridLayout>
 </LinearLayout>

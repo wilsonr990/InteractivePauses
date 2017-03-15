@@ -6,8 +6,12 @@
     <string name="facebook_login">Iniciar sesión con Facebook</string>
     <string name="google_login">INICIAR SESIÓN CON GOOGLE</string>
     <string name="avatar">av1</string>
+    <string name="activity">activity</string>
     <string name="welcome">Welcome mr</string>
     <string name="configuration">CONFIGURACIÓN</string>
-    <string name="schedule">MIS HORARIOS</string>
+    <string name="mySchedule">MIS HORARIOS</string>
+    <string name="schedule">PROGRAMAR</string>
     <string name="activities">ACTIVIDADES</string>
+    <string name="first_activity">FIRST ACTIVITY</string>
+    <string name="first_activity_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
 </resources>
