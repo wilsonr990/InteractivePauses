@@ -5,41 +5,51 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import net.interactive.pauses.R.id;
 import net.interactive.pauses.R.layout;
+import net.interactive.pauses.logic.login.LoginHandler;
+import net.interactive.pauses.logic.login.LoginListener;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends Activity implements LoginListener {
     public static final String LOGIN_NAME = "com.example.myfirstapp.MESSAGE";
     private int selectedAvatar;
+    private LoginHandler loginHandler;
+
+    // UI references.
+    private EditText name;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_login);
+
+        name = (EditText) findViewById(id.name);
+        progressBar = (ProgressBar) findViewById(id.progress_bar);
     }
 
     public void facebookLogin(View view) {
         //TODO: Run facebook login process
-        doLogin("Facebook User", 0);
+        name.setError("Currently Your Name is the only login available");
     }
 
     public void googleLogin(View view) {
         //TODO: Run google login process
-        doLogin("Google User", 0);
+        name.setError("Currently Your Name is the only login available");
     }
 
     public void simpleLogin(View view) {
-        EditText editText = (EditText) findViewById(id.name);
-        if (editText != null) {
-            doLogin(editText.getText().toString(), selectedAvatar);
+        String typedName = name.getText().toString();
+        if (typedName.isEmpty()) {
+            name.setError("You should type your name here");
         }
-    }
-
-    void doLogin(String name, int avatar) {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra(LOGIN_NAME, name);
-        startActivity(intent);
+        if (loginHandler == null) {
+            loginHandler = new LoginHandler(this);
+            loginHandler.execute(typedName, String.valueOf(selectedAvatar));
+            progressBar.setVisibility(View.VISIBLE);
+        }
     }
 
     public void avatarSelected(View view) {
@@ -47,9 +57,17 @@ public class LoginActivity extends Activity {
     }
 
     @Override
-    public String toString() {
-        return "LoginActivity{" +
-                "selectedAvatar=" + selectedAvatar +
-                '}';
+    public void onLoginFinished(Boolean ok, String message) {
+        //change to login window
+        if (ok) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra(LOGIN_NAME, name.getText());
+            startActivity(intent);
+        } else {
+            name.setError(message);
+        }
+        //hide progress bar
+        progressBar.setVisibility(View.GONE);
+        loginHandler = null;
     }
 }

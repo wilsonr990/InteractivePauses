@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(layout.activity_main);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra(LoginActivity.LOGIN_NAME);
+        String name = intent.getExtras().get(LoginActivity.LOGIN_NAME).toString();
         TextView textView = (TextView) findViewById(id.username);
         if (textView != null) {
             textView.setText(' ' + name);

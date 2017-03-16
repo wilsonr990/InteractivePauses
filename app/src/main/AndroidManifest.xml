@@ -18,6 +18,21 @@
         <activity
             android:name=".MainActivity"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivitiesActivity"
+            android:parentActivityName=".ActivitiesActivity" />
+        <activity
+            android:name=".JustAnActivity"
+            android:parentActivityName=".JustAnActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:parentActivityName=".ProfileActivity" />
+        <activity
+            android:name=".ScheduleActivity"
+            android:parentActivityName=".ScheduleActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".SettingsActivity" />
     </application>
 
 </manifest>
